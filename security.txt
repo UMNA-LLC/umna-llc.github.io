@@ -1,0 +1,7 @@
+# UMNA LLC SEC
+Contact: mailto:director@umna.az
+Encryption: https://umna.az/pgp-key
+Acknowledgements: https://umna.az/acknowledgements
+Policy: https://umna.az/policy
+Preferred-Languages: az, ru, en
+Hiring: https://umna.az/careers
