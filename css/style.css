@@ -81,6 +81,7 @@ body {
     gap:10px;
     justify-self:end;
     margin-right:20px;
+    align-self:flex-end;
 }
 
 /* GENEL BUTON */
