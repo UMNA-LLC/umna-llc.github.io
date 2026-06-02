@@ -36,6 +36,36 @@ body {
     overflow-x: hidden;
 }
 
+.bank_card{
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    text-align:center;
+}
+
+.bank_grid{
+    display:grid;
+    gap:12px;
+    margin-top:20px;
+    text-align:left;
+}
+
+.bank_grid div{
+    display:flex;
+    justify-content:space-between;
+    border-bottom:1px solid #eee;
+    padding:6px 0;
+}
+
+.bank_grid span{
+    color:#777;
+}
+
+.bank_grid b{
+    color:#111;
+}
+
 .search_btn{
     display:flex;
     gap:10px;
