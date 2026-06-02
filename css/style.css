@@ -101,6 +101,7 @@ body {
     gap:10px;
   margin-left:auto;
     margin-right:30px;
+}
 
 .search_btn a{
     display:inline-block;
@@ -398,10 +399,9 @@ button {
 }
 
 .search_btn li {
-    float: left;
-    font-size: 18px;
-    color: #dedcdc;
-    padding: 0px 35px 0px 35px;
+    display:inline-block;
+    float: none;
+    padding: 0px;
 }
 
 .search_btn li a {
