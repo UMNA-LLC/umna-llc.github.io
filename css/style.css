@@ -36,6 +36,46 @@ body {
     overflow-x: hidden;
 }
 
+.search_btn{
+    display:flex;
+    gap:10px;
+    justify-self:end;
+    margin-right:20px;
+}
+
+/* GENEL BUTON */
+.cta{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    padding:8px 14px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:500;
+    white-space:nowrap;
+    transition:0.25s;
+}
+
+/* E-ŞİKAYET */
+.cta-complaint{
+    background:#e74c3c;
+    color:#fff;
+}
+
+.cta-complaint:hover{
+    background:#c0392b;
+}
+
+/* KABİNET */
+.cta-login{
+    background:#2c3e50;
+    color:#fff;
+}
+
+.cta-login:hover{
+    background:#1a252f;
+}
+
 .custom_bg{
     display:flex;
     align-items:center;
