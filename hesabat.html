@@ -11,20 +11,20 @@
 
    <style>
       .report_section{
-         padding:80px 0;
+         padding:70px 0;
          background:#f5f7fb;
       }
 
       .report_title{
          text-align:center;
-         font-size:32px;
+         font-size:34px;
          font-weight:700;
          margin-bottom:10px;
       }
 
       .report_sub{
          text-align:center;
-         margin-bottom:40px;
+         margin-bottom:35px;
          color:#666;
       }
 
@@ -51,22 +51,23 @@
          padding:20px;
          border-radius:12px;
          box-shadow:0 10px 25px rgba(0,0,0,0.08);
-         transition:0.2s;
+         transition:0.25s;
+         text-align:center;
       }
 
       .pdf_card:hover{
-         transform:translateY(-5px);
+         transform:translateY(-6px);
       }
 
       .pdf_icon{
-         font-size:40px;
+         font-size:42px;
          color:#ed1c24;
          margin-bottom:10px;
       }
 
       .pdf_title{
          font-weight:600;
-         margin-bottom:10px;
+         margin-bottom:12px;
       }
 
       .pdf_btn a{
@@ -82,35 +83,64 @@
          background:#ed1c24;
       }
 
-      .hidden{
-         display:none !important;
-      }
+      .hidden{ display:none !important; }
    </style>
 </head>
 
 <body>
 
-<!-- HEADER (kopyaladığın navbarı buraya koyabilirsin) -->
+<!-- ================= HEADER ================= -->
+<div class="header_section">
+   <div class="container">
 
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+         <a class="navbar-brand" href="index.html">
+            <img src="images/umna.png">
+         </a>
+      </nav>
+
+      <div class="custom_bg">
+         <div class="custom_menu">
+            <ul>
+               <li><a href="index.html">Ana Səhifə</a></li>
+               <li><a href="hosting.html">Əhatə dairəmiz</a></li>
+               <li><a href="domain.html">Tariflərimiz</a></li>
+               <li><a href="services.html">Xidmətlərimiz</a></li>
+               <li><a href="bank.html">Bank Rekviziti</a></li>
+               <li class="active"><a href="hesabat.html">Hesabat</a></li>
+               <li><a href="contact.html">Əlaqə</a></li>
+            </ul>
+         </div>
+
+         <div class="search_btn">
+            <ul>
+               <li><a href="https://e-complaint.icta.az/" target="_blank">E-şikayət</a></li>
+               <li><a href="https://user.umna.az" target="_blank">Şəxsi Kabinet</a></li>
+            </ul>
+         </div>
+      </div>
+
+   </div>
+</div>
+
+<!-- ================= REPORT SECTION ================= -->
 <div class="report_section">
    <div class="container">
 
       <h1 class="report_title">Hesabatlar</h1>
-      <p class="report_sub">UMNA MMC maliyyə hesabat sənədləri</p>
+      <p class="report_sub">UMNA MMC maliyyə sənədləri və vergi hesabatları</p>
 
-      <!-- SEARCH -->
       <div class="search_box">
-         <input type="text" id="searchInput" placeholder="Axtar: 2024, 2025, menfeet...">
+         <input type="text" id="searchInput" placeholder="Axtar: 2024, 2025...">
       </div>
 
-      <!-- PDF LIST -->
       <div class="pdf_grid" id="pdfGrid">
 
          <div class="pdf_card" data-name="2024 menfeet zarar">
             <div class="pdf_icon"><i class="fa fa-file-pdf-o"></i></div>
             <div class="pdf_title">UMNA Mənfəət Zərər 2024</div>
             <div class="pdf_btn">
-               <a href="pdf/UMNA Menfeet zerer 2024.pdf" target="_blank">Aç / Yüklə</a>
+               <a href="pdf/UMNA Menfeet zerer 2024.pdf" target="_blank">Aç</a>
             </div>
          </div>
 
@@ -118,7 +148,7 @@
             <div class="pdf_icon"><i class="fa fa-file-pdf-o"></i></div>
             <div class="pdf_title">UMNA Mənfəət Zərər 2025</div>
             <div class="pdf_btn">
-               <a href="pdf/UMNA Menfeet zerer 2025.pdf" target="_blank">Aç / Yüklə</a>
+               <a href="pdf/UMNA Menfeet zerer 2025.pdf" target="_blank">Aç</a>
             </div>
          </div>
 
@@ -127,20 +157,48 @@
    </div>
 </div>
 
+<!-- ================= FOOTER ================= -->
+<div class="footer_section layout_padding">
+   <div class="container">
+      <div class="row">
+
+         <div class="col-sm-4">
+            <h3 class="footer_text">Faydalı keçidlər</h3>
+            <div class="footer_menu">
+               <ul>
+                  <li><a href="index.html">Ana Səhifə</a></li>
+                  <li><a href="hosting.html">Əhatə dairəmiz</a></li>
+                  <li><a href="domain.html">Tariflərimiz</a></li>
+                  <li><a href="services.html">Xidmətlərimiz</a></li>
+                  <li><a href="contact.html">Əlaqə</a></li>
+               </ul>
+            </div>
+         </div>
+
+         <div class="col-sm-4">
+            <h3 class="footer_text">Ünvan</h3>
+            <p class="dummy_text">Bakı, Azərbaycan</p>
+         </div>
+
+         <div class="col-sm-4">
+            <h3 class="footer_text">Sosial</h3>
+         </div>
+
+      </div>
+   </div>
+</div>
+
+<!-- ================= JS ================= -->
 <script>
    const input = document.getElementById("searchInput");
    const cards = document.querySelectorAll(".pdf_card");
 
-   input.addEventListener("keyup", function(){
+   input.addEventListener("keyup", function () {
       const value = this.value.toLowerCase();
 
       cards.forEach(card => {
          const name = card.getAttribute("data-name");
-         if(name.toLowerCase().includes(value)){
-            card.classList.remove("hidden");
-         } else {
-            card.classList.add("hidden");
-         }
+         card.classList.toggle("hidden", !name.includes(value));
       });
    });
 </script>
