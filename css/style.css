@@ -83,6 +83,8 @@ body {
 
 .custom_menu{
     flex:1;
+    display:flex;
+    justify-content:center;
 }
 
 .custom_menu ul{
@@ -97,14 +99,13 @@ body {
 .search_btn{
     display:flex;
     gap:10px;
-    justify-self:end;
-    margin-right:20px;
-}
+  margin-left:auto;
+    margin-right:30px;
 
 .search_btn a{
     display:inline-block;
     padding:6px 12px;
-    background:#111;   /* koyu yaptık */
+    background:#111;
     color:#fff;
     border-radius:6px;
     text-decoration:none;
